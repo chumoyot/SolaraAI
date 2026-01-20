@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solara AI | </title>
+    <title>Solara AI | Solar-Powered AI Infrastructure</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -120,6 +120,15 @@
             font-weight: 700;
             color: var(--primary-blue);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo svg {
+            height: 2.5rem;
+            width: auto;
+            flex-shrink: 0;
         }
 
         .logo span {
@@ -488,11 +497,24 @@
             margin-bottom: 3rem;
         }
 
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+        }
+
         .footer-logo {
             font-family: 'Poppins', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .footer-logo svg {
+            height: 2.2rem;
+            width: auto;
         }
 
         .footer-logo span {
@@ -620,6 +642,14 @@
                 max-width: 300px;
                 text-align: center;
             }
+            
+            .logo svg {
+                height: 2rem;
+            }
+            
+            .footer-logo svg {
+                height: 1.8rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -642,6 +672,10 @@
             .metric-value {
                 font-size: 2.5rem;
             }
+            
+            .logo svg {
+                height: 1.8rem;
+            }
         }
     </style>
     <!-- Font Awesome for Icons -->
@@ -652,7 +686,90 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Solara<span>AI</span></a>
+                <a href="#" class="logo">
+                    <!-- Your SVG Logo -->
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="sunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FF8C5A;stop-opacity:1" />
+                            </linearGradient>
+                            
+                            <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#0A2540;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#1A3A5F;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Central sun core with neural network pattern -->
+                        <circle cx="100" cy="100" r="28" fill="url(#sunGradient)"/>
+                        
+                        <!-- Inner circuit nodes (neural network) -->
+                        <circle cx="100" cy="100" r="4" fill="#0A2540"/>
+                        <circle cx="85" cy="100" r="3" fill="#0A2540" opacity="0.8"/>
+                        <circle cx="115" cy="100" r="3" fill="#0A2540" opacity="0.8"/>
+                        <circle cx="100" cy="85" r="3" fill="#0A2540" opacity="0.8"/>
+                        <circle cx="100" cy="115" r="3" fill="#0A2540" opacity="0.8"/>
+                        
+                        <!-- Solar rays with circuit-board style endpoints -->
+                        <!-- Top ray -->
+                        <g transform="rotate(0 100 100)">
+                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                        </g>
+                        
+                        <!-- Top-right ray -->
+                        <g transform="rotate(45 100 100)">
+                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                        </g>
+                        
+                        <!-- Right ray -->
+                        <g transform="rotate(90 100 100)">
+                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                        </g>
+                        
+                        <!-- Bottom-right ray -->
+                        <g transform="rotate(135 100 100)">
+                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                        </g>
+                        
+                        <!-- Bottom ray -->
+                        <g transform="rotate(180 100 100)">
+                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                        </g>
+                        
+                        <!-- Bottom-left ray -->
+                        <g transform="rotate(225 100 100)">
+                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                        </g>
+                        
+                        <!-- Left ray -->
+                        <g transform="rotate(270 100 100)">
+                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                        </g>
+                        
+                        <!-- Top-left ray -->
+                        <g transform="rotate(315 100 100)">
+                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                        </g>
+                    </svg>
+                    Solara<span>AI</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="#problem">The Problem</a></li>
                     <li><a href="#solution">Our Solution</a></li>
@@ -732,7 +849,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>The Complete Local AI Infrastructure</h2>
-                <p>We install the AI  where the data lives—powered by the sun above it.</p>
+                <p>We install the AI where the data lives—powered by the sun above it.</p>
             </div>
             
             <div class="solution-flow">
@@ -779,7 +896,10 @@
     <!-- Technology Section -->
     <section id="technology" class="technology">
         <div class="container">
- 
+            <div class="section-header">
+                <h2>Proven Technology, Novel Integration</h2>
+                <p>We combine battle-tested components into a seamless, purpose-built system for industrial AI.</p>
+            </div>
             
             <div class="tech-cards">
                 <div class="tech-card">
@@ -870,11 +990,93 @@
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">Solara<span>AI</span></div>
-                    <p>We enable manufacturers to deploy sustainable, secure, and sovereign AI infrastructure powered by on-site renewable energy.</p>
-                    <div class="footer-social">
-                        <!-- Social media links would go here -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <!-- Your SVG Logo in Footer -->
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="sunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#FF8C5A;stop-opacity:1" />
+                                </linearGradient>
+                                
+                                <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#0A2540;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#1A3A5F;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Central sun core with neural network pattern -->
+                            <circle cx="100" cy="100" r="28" fill="url(#sunGradient)"/>
+                            
+                            <!-- Inner circuit nodes (neural network) -->
+                            <circle cx="100" cy="100" r="4" fill="#0A2540"/>
+                            <circle cx="85" cy="100" r="3" fill="#0A2540" opacity="0.8"/>
+                            <circle cx="115" cy="100" r="3" fill="#0A2540" opacity="0.8"/>
+                            <circle cx="100" cy="85" r="3" fill="#0A2540" opacity="0.8"/>
+                            <circle cx="100" cy="115" r="3" fill="#0A2540" opacity="0.8"/>
+                            
+                            <!-- Solar rays with circuit-board style endpoints -->
+                            <!-- Top ray -->
+                            <g transform="rotate(0 100 100)">
+                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Top-right ray -->
+                            <g transform="rotate(45 100 100)">
+                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Right ray -->
+                            <g transform="rotate(90 100 100)">
+                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Bottom-right ray -->
+                            <g transform="rotate(135 100 100)">
+                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Bottom ray -->
+                            <g transform="rotate(180 100 100)">
+                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Bottom-left ray -->
+                            <g transform="rotate(225 100 100)">
+                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Left ray -->
+                            <g transform="rotate(270 100 100)">
+                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                            </g>
+                            
+                            <!-- Top-left ray -->
+                            <g transform="rotate(315 100 100)">
+                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
+                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
+                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
+                            </g>
+                        </svg>
+                        Solara<span>AI</span>
+                    </div>
+                    <div class="footer-about">
+                        <p>We enable manufacturers to deploy sustainable, secure, and sovereign AI infrastructure powered by on-site renewable energy.</p>
                     </div>
                 </div>
                 
@@ -966,10 +1168,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
