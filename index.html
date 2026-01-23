@@ -120,15 +120,6 @@
             font-weight: 700;
             color: var(--primary-blue);
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .logo svg {
-            height: 2.5rem;
-            width: auto;
-            flex-shrink: 0;
         }
 
         .logo span {
@@ -419,6 +410,48 @@
             margin-top: 0.2rem;
         }
 
+        /* ===== ROI CALCULATOR SECTION ===== */
+        .roi-calculator {
+            background-color: var(--light-gray);
+        }
+
+        .calculator-container {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-top: 2rem;
+            min-height: 600px;
+            position: relative;
+        }
+
+        .calculator-info {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: var(--radius);
+            border-left: 4px solid var(--solar-accent);
+        }
+
+        .calculator-info h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .calculator-info ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .calculator-info li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
         /* ===== METRICS SECTION ===== */
         .metrics {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
@@ -497,24 +530,11 @@
             margin-bottom: 3rem;
         }
 
-        .footer-brand {
-            display: flex;
-            flex-direction: column;
-        }
-
         .footer-logo {
             font-family: 'Poppins', sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-
-        .footer-logo svg {
-            height: 2.2rem;
-            width: auto;
         }
 
         .footer-logo span {
@@ -567,6 +587,15 @@
             font-size: 0.9rem;
         }
 
+        /* ===== STACK AI WIDGET STYLING ===== */
+        .stackai-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 992px) {
             .hero h1 {
@@ -583,6 +612,10 @@
             
             .solution-flow {
                 flex-direction: column;
+            }
+            
+            .stackai-iframe {
+                height: 500px;
             }
         }
 
@@ -643,12 +676,16 @@
                 text-align: center;
             }
             
-            .logo svg {
-                height: 2rem;
+            .calculator-container {
+                padding: 1rem;
             }
             
-            .footer-logo svg {
-                height: 1.8rem;
+            .stackai-iframe {
+                height: 450px;
+            }
+            
+            .calculator-info ul {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -673,8 +710,8 @@
                 font-size: 2.5rem;
             }
             
-            .logo svg {
-                height: 1.8rem;
+            .stackai-iframe {
+                height: 400px;
             }
         }
     </style>
@@ -686,94 +723,12 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">
-                    <!-- Your SVG Logo -->
-                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="sunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#FF8C5A;stop-opacity:1" />
-                            </linearGradient>
-                            
-                            <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" style="stop-color:#0A2540;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#1A3A5F;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        
-                        <!-- Central sun core with neural network pattern -->
-                        <circle cx="100" cy="100" r="28" fill="url(#sunGradient)"/>
-                        
-                        <!-- Inner circuit nodes (neural network) -->
-                        <circle cx="100" cy="100" r="4" fill="#0A2540"/>
-                        <circle cx="85" cy="100" r="3" fill="#0A2540" opacity="0.8"/>
-                        <circle cx="115" cy="100" r="3" fill="#0A2540" opacity="0.8"/>
-                        <circle cx="100" cy="85" r="3" fill="#0A2540" opacity="0.8"/>
-                        <circle cx="100" cy="115" r="3" fill="#0A2540" opacity="0.8"/>
-                        
-                        <!-- Solar rays with circuit-board style endpoints -->
-                        <!-- Top ray -->
-                        <g transform="rotate(0 100 100)">
-                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                        </g>
-                        
-                        <!-- Top-right ray -->
-                        <g transform="rotate(45 100 100)">
-                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                        </g>
-                        
-                        <!-- Right ray -->
-                        <g transform="rotate(90 100 100)">
-                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                        </g>
-                        
-                        <!-- Bottom-right ray -->
-                        <g transform="rotate(135 100 100)">
-                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                        </g>
-                        
-                        <!-- Bottom ray -->
-                        <g transform="rotate(180 100 100)">
-                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                        </g>
-                        
-                        <!-- Bottom-left ray -->
-                        <g transform="rotate(225 100 100)">
-                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                        </g>
-                        
-                        <!-- Left ray -->
-                        <g transform="rotate(270 100 100)">
-                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                        </g>
-                        
-                        <!-- Top-left ray -->
-                        <g transform="rotate(315 100 100)">
-                            <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                            <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                            <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                        </g>
-                    </svg>
-                    Solara<span>AI</span>
-                </a>
+                <a href="#" class="logo">Solara<span>AI</span></a>
                 <ul class="nav-links">
                     <li><a href="#problem">The Problem</a></li>
                     <li><a href="#solution">Our Solution</a></li>
                     <li><a href="#technology">Technology</a></li>
+                    <li><a href="#roi-calculator">ROI Calculator</a></li>
                     <li><a href="#metrics">Impact</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -843,11 +798,7 @@
             </div>
         </div>
     </section>
-<!-- Stack AI Floating Chat Widget -->
-<script
-  src="https://unpkg.com/react-stackai@latest/dist/vanilla/vanilla-stackai.js"
-  data-project-url="https://www.stack-ai.com/embed/3786c840-821e-4909-a73f-82aa9df3adb1/9f5fcfa3-46c9-45b2-9cec-349e00ce6aa5/6973f2cba0a25b0916cc63d9">
-</script>
+
     <!-- Solution Section -->
     <section id="solution" class="solution">
         <div class="container">
@@ -900,7 +851,11 @@
     <!-- Technology Section -->
     <section id="technology" class="technology">
         <div class="container">
-           
+            <div class="section-header">
+                <h2>Proven Technology, Novel Integration</h2>
+                <p>We combine battle-tested components into a seamless, purpose-built system for industrial AI.</p>
+            </div>
+            
             <div class="tech-cards">
                 <div class="tech-card">
                     <div class="tech-card-header">
@@ -943,6 +898,40 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator Section -->
+    <section id="roi-calculator" class="roi-calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2>Calculate Your Savings</h2>
+                <p>See exactly how much you can save with solar-powered local AI</p>
+            </div>
+            
+            <div class="calculator-container">
+                <!-- Stack AI ROI Calculator Widget -->
+                <iframe 
+                    class="stackai-iframe"
+                    src="https://www.stack-ai.com/embed/3786c840-821e-4909-a73f-82aa9df3adb1/9f5fcfa3-46c9-45b2-9cec-349e00ce6aa5/6973f2cba0a25b0916cc63d9"
+                    allow="microphone; camera"
+                ></iframe>
+            </div>
+            
+            <div class="calculator-info">
+                <h3>What We Calculate:</h3>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Cloud AI Cost Elimination</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Downtime Reduction Savings</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Data Transfer Cost Savings</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Energy & Carbon Impact</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Payback Period & ROI</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                    <i class="fas fa-info-circle" style="color: var(--solar-accent);"></i> 
+                    All calculations are estimates. Get a personalized quote after the calculation.
+                </p>
             </div>
         </div>
     </section>
@@ -990,93 +979,11 @@
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <!-- Your SVG Logo in Footer -->
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="sunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#FF8C5A;stop-opacity:1" />
-                                </linearGradient>
-                                
-                                <linearGradient id="circuitGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" style="stop-color:#0A2540;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#1A3A5F;stop-opacity:1" />
-                                </linearGradient>
-                            </defs>
-                            
-                            <!-- Central sun core with neural network pattern -->
-                            <circle cx="100" cy="100" r="28" fill="url(#sunGradient)"/>
-                            
-                            <!-- Inner circuit nodes (neural network) -->
-                            <circle cx="100" cy="100" r="4" fill="#0A2540"/>
-                            <circle cx="85" cy="100" r="3" fill="#0A2540" opacity="0.8"/>
-                            <circle cx="115" cy="100" r="3" fill="#0A2540" opacity="0.8"/>
-                            <circle cx="100" cy="85" r="3" fill="#0A2540" opacity="0.8"/>
-                            <circle cx="100" cy="115" r="3" fill="#0A2540" opacity="0.8"/>
-                            
-                            <!-- Solar rays with circuit-board style endpoints -->
-                            <!-- Top ray -->
-                            <g transform="rotate(0 100 100)">
-                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                            </g>
-                            
-                            <!-- Top-right ray -->
-                            <g transform="rotate(45 100 100)">
-                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                            </g>
-                            
-                            <!-- Right ray -->
-                            <g transform="rotate(90 100 100)">
-                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                            </g>
-                            
-                            <!-- Bottom-right ray -->
-                            <g transform="rotate(135 100 100)">
-                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                            </g>
-                            
-                            <!-- Bottom ray -->
-                            <g transform="rotate(180 100 100)">
-                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                            </g>
-                            
-                            <!-- Bottom-left ray -->
-                            <g transform="rotate(225 100 100)">
-                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                            </g>
-                            
-                            <!-- Left ray -->
-                            <g transform="rotate(270 100 100)">
-                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                            </g>
-                            
-                            <!-- Top-left ray -->
-                            <g transform="rotate(315 100 100)">
-                                <rect x="98" y="45" width="4" height="25" fill="url(#circuitGradient)" rx="2"/>
-                                <circle cx="100" cy="42" r="5" fill="#0A2540"/>
-                                <circle cx="100" cy="42" r="2.5" fill="none" stroke="#FF6B35" stroke-width="1"/>
-                            </g>
-                        </svg>
-                        Solara<span>AI</span>
-                    </div>
-                    <div class="footer-about">
-                        <p>We enable manufacturers to deploy sustainable, secure, and sovereign AI infrastructure powered by on-site renewable energy.</p>
+                <div class="footer-about">
+                    <div class="footer-logo">Solara<span>AI</span></div>
+                    <p>We enable manufacturers to deploy sustainable, secure, and sovereign AI infrastructure powered by on-site renewable energy.</p>
+                    <div class="footer-social">
+                        <!-- Social media links would go here -->
                     </div>
                 </div>
                 
@@ -1086,6 +993,7 @@
                         <li><a href="#problem">The Problem</a></li>
                         <li><a href="#solution">Our Solution</a></li>
                         <li><a href="#technology">Technology</a></li>
+                        <li><a href="#roi-calculator">ROI Calculator</a></li>
                         <li><a href="#metrics">Impact Metrics</a></li>                        
                     </ul>
                 </div>
@@ -1165,9 +1073,39 @@
                 observer.observe(metricsSection);
             }
         });
+
+        // Stack AI widget fallback loader
+        document.addEventListener('DOMContentLoaded', function() {
+            const stackaiIframe = document.querySelector('.stackai-iframe');
+            if (stackaiIframe) {
+                // Add loading state
+                stackaiIframe.addEventListener('load', function() {
+                    console.log('Stack AI ROI Calculator loaded successfully');
+                });
+                
+                stackaiIframe.addEventListener('error', function() {
+                    console.log('Stack AI widget failed to load, showing fallback');
+                    // You could show a fallback message or button here
+                });
+            }
+        });
+    </script>
+    
+    <!-- Stack AI Alternative Script Embed (Backup) -->
+    <script>
+        // Alternative loading method if iframe doesn't work
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const iframe = document.querySelector('.stackai-iframe');
+                if (iframe && !iframe.contentWindow) {
+                    console.log('Loading Stack AI via script method');
+                    const script = document.createElement('script');
+                    script.src = 'https://unpkg.com/react-stackai@latest/dist/vanilla/vanilla-stackai.js';
+                    script.setAttribute('data-project-url', 'https://www.stack-ai.com/embed/3786c840-821e-4909-a73f-82aa9df3adb1/9f5fcfa3-46c9-45b2-9cec-349e00ce6aa5/6973f2cba0a25b0916cc63d9');
+                    document.body.appendChild(script);
+                }
+            }, 2000);
+        });
     </script>
 </body>
 </html>
-
-
-
