@@ -452,6 +452,16 @@
             gap: 0.8rem;
         }
 
+        /* Stack AI iframe styling */
+        .stackai-iframe {
+            width: 100%;
+            height: 650px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            background: white;
+        }
+
         /* ===== METRICS SECTION ===== */
         .metrics {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
@@ -587,15 +597,6 @@
             font-size: 0.9rem;
         }
 
-        /* ===== STACK AI WIDGET STYLING ===== */
-        .stackai-iframe {
-            width: 100%;
-            height: 600px;
-            border: none;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-        }
-
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 992px) {
             .hero h1 {
@@ -615,7 +616,7 @@
             }
             
             .stackai-iframe {
-                height: 500px;
+                height: 550px;
             }
         }
 
@@ -681,7 +682,7 @@
             }
             
             .stackai-iframe {
-                height: 450px;
+                height: 500px;
             }
             
             .calculator-info ul {
@@ -711,7 +712,7 @@
             }
             
             .stackai-iframe {
-                height: 400px;
+                height: 450px;
             }
         }
     </style>
@@ -728,7 +729,7 @@
                     <li><a href="#problem">The Problem</a></li>
                     <li><a href="#solution">Our Solution</a></li>
                     <li><a href="#technology">Technology</a></li>
-                    <li><a href="#roi-calculator">ROI Calculator</a></li>
+                    <li><a href="#roi-calculator">Carbon Calculator</a></li>
                     <li><a href="#metrics">Impact</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -744,22 +745,24 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Solar Powered AI Infrastructure</h1>
-                <p>Solar-powered, on-premise artificial intelligence for secure, sustainable manufacturing. Achieve complete data sovereignty while eliminating cloud dependency and energy waste.</p>
-                <a href="#contact" class="btn btn-primary">Request Pilot Program Details</a>
+                <p>Solar-powered, on-premise artificial intelligence for secure, sustainable operations. Achieve complete data sovereignty while eliminating cloud dependency and energy waste.</p>
+                <a href="#roi-calculator" class="btn btn-primary">
+                    <i class="fas fa-calculator"></i> Calculate Your Carbon Impact
+                </a>
                 
                 <div class="value-props">
                     <div class="value-prop">
                         <i class="fas fa-shield-alt"></i>
                         <div>
-                            <h3>Zero Data Leaves Your Facility</h3>
+                            <h3>Zero Data Leaves Your Premise</h3>
                             <p>Complete data sovereignty with on-premise processing</p>
                         </div>
                     </div>
                     <div class="value-prop">
                         <i class="fas fa-sun"></i>
                         <div>
-                            <h3>Powered by Your Solar Energy</h3>
-                            <p>Or a custom renewable energy source depending on your locations</p>
+                            <h3>Powered by Renewable Energy</h3>
+                            <p>Solar, wind, or your existing renewable source</p>
                         </div>
                     </div>
                     <div class="value-prop">
@@ -778,22 +781,22 @@
     <section id="problem" class="problem">
         <div class="container">
             <div class="section-header">
-                <h2>Your Smart Factory Has a Data Leak</h2>
-                <p>Traditional cloud-based AI creates hidden costs and risks that undermine your sustainability and security goals.</p>
+                <h2>The Hidden Environmental Cost of Cloud AI</h2>
+                <p>Traditional cloud-based AI creates significant carbon emissions that undermine sustainability goals.</p>
             </div>
             
             <div class="problem-cards">
                 <div class="problem-card">
-                    <h3><i class="fas fa-user-secret"></i> Data & Privacy Risk</h3>
-                    <p>Every sensor streams proprietary operational patterns to third-party servers, creating intellectual property vulnerability and compliance challenges.</p>
+                    <h3><i class="fas fa-cloud"></i> Energy Intensive Data Centers</h3>
+                    <p>Cloud data centers consume massive electricity, often from fossil fuels, generating high carbon emissions for every AI query.</p>
                 </div>
                 <div class="problem-card">
-                    <h3><i class="fas fa-bolt"></i> Energy Contradiction</h3>
-                    <p>Your solar investment is offset by fossil-fueled cloud compute! Each AI query travels hundreds of miles to power hungry data centers.</p>
+                    <h3><i class="fas fa-tachometer-alt"></i> Data Transfer Emissions</h3>
+                    <p>Every sensor reading and AI inference travels hundreds of miles, creating unnecessary network energy consumption.</p>
                 </div>
                 <div class="problem-card">
-                    <h3><i class="fas fa-tachometer-alt"></i> Latency Limitations</h3>
-                    <p>Real-time decisions wait 300ms for round-trip to data centers. Critical process adjustments lag behind the machines they're meant to optimize.</p>
+                    <h3><i class="fas fa-chart-line"></i> Unmeasured Carbon Footprint</h3>
+                    <p>Most organizations can't measure their AI carbon impact, making ESG reporting incomplete and sustainability goals unreachable.</p>
                 </div>
             </div>
         </div>
@@ -803,8 +806,8 @@
     <section id="solution" class="solution">
         <div class="container">
             <div class="section-header">
-                <h2>The Complete Local AI Infrastructure</h2>
-                <p>We install the AI where the data lives—powered by the sun above it.</p>
+                <h2>The Sustainable AI Infrastructure</h2>
+                <p>We install AI where the data lives—powered by renewable energy on your premises.</p>
             </div>
             
             <div class="solution-flow">
@@ -812,8 +815,8 @@
                     <div class="flow-step-icon">
                         <i class="fas fa-solar-panel"></i>
                     </div>
-                    <h3>Factory Rooftop Solar</h3>
-                    <p>Clean DC power generation directly integrated with AI compute infrastructure.</p>
+                    <h3>Your Renewable Energy</h3>
+                    <p>Solar, wind, or existing green power directly integrated with AI compute.</p>
                 </div>
                 
                 <div class="flow-arrow">
@@ -825,7 +828,7 @@
                         <i class="fas fa-server"></i>
                     </div>
                     <h3>On-Premise AI Server</h3>
-                    <p>Local inference engine with specialized models for your manufacturing processes.</p>
+                    <p>Local inference engine powered 100% by your renewable source.</p>
                 </div>
                 
                 <div class="flow-arrow">
@@ -836,13 +839,13 @@
                     <div class="flow-step-icon">
                         <i class="fas fa-industry"></i>
                     </div>
-                    <h3>People & Machines</h3>
-                    <p>Enhanced productivity, real-time optimization, and predictive maintenance at the source of data generation.</p>
+                    <h3>Your Operations</h3>
+                    <p>Carbon-neutral AI for manufacturing, offices, research, healthcare, or any facility.</p>
                 </div>
             </div>
             
             <div class="solution-quote">
-                <p>"Sustainable AI powered by Green Computing."</p>
+                <p>"Sustainable AI powered by the energy above your roof."</p>
                 <div class="author">— Solara AI Vision</div>
             </div>
         </div>
@@ -852,49 +855,51 @@
     <section id="technology" class="technology">
         <div class="container">
             <div class="section-header">
-                <h2>Proven Technology, Novel Integration</h2>
-                <p>We combine battle-tested components into a seamless, purpose-built system for industrial AI.</p>
+                <h2>Technology for Green Computing</h2>
+                <p>We combine renewable energy systems with efficient AI hardware for maximum impact.</p>
             </div>
             
             <div class="tech-cards">
                 <div class="tech-card">
                     <div class="tech-card-header">
-                        <h3><i class="fas fa-plug"></i> Energy Layer</h3>
+                        <h3><i class="fas fa-plug"></i> Renewable Integration</h3>
                     </div>
                     <div class="tech-card-body">
-                        <p>High-efficiency compute hardware with good thermal management.</p>
+                        <p>Direct DC coupling to solar/wind systems with intelligent power management.</p>
                         <ul>                           
-                            <li>Adaptive to variable renewable generation</li>                            
+                            <li>Optimized for variable renewable generation</li>
+                            <li>Grid-tie with battery backup options</li>
+                            <li>Real-time energy monitoring</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="tech-card">
                     <div class="tech-card-header">
-                        <h3><i class="fas fa-brain"></i> Inference Engine</h3>
+                        <h3><i class="fas fa-brain"></i> Carbon-Aware AI</h3>
                     </div>
                     <div class="tech-card-body">
-                        <p>Specialized AI models fine-tuned with your equipment manuals and operational data.</p>
+                        <p>AI models optimized for energy efficiency with carbon tracking.</p>
                         <ul>
-                            <li>Fine-tuned for predictive maintenance</li>
-                            <li>Real-time quality control analytics</li>
-                            <li>Natural language query interface</li>
-                            <li>Continuous learning from local data</li>
+                            <li>Energy-efficient inference engines</li>
+                            <li>Carbon footprint monitoring</li>
+                            <li>ESG reporting integration</li>
+                            <li>Continuous optimization</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="tech-card">
                     <div class="tech-card-header">
-                        <h3><i class="fas fa-network-wired"></i> Integration</h3>
+                        <h3><i class="fas fa-network-wired"></i> Universal Deployment</h3>
                     </div>
                     <div class="tech-card-body">
-                        <p>Seamless connection to existing industrial systems through secure local APIs.</p>
+                        <p>Seamless integration with any facility type and existing systems.</p>
                         <ul>
-                            <li>PLC and SCADA compatibility</li>
-                            <li>Legacy equipment support</li>
-                            <li>Zero-disruption deployment</li>
-                            <li>Standard industrial protocols</li>
+                            <li>Manufacturing & industrial</li>
+                            <li>Office & commercial buildings</li>
+                            <li>Research & healthcare facilities</li>
+                            <li>Education campuses</li>
                         </ul>
                     </div>
                 </div>
@@ -902,35 +907,36 @@
         </div>
     </section>
 
-    <!-- ROI Calculator Section -->
+    <!-- Carbon Calculator Section -->
     <section id="roi-calculator" class="roi-calculator">
         <div class="container">
             <div class="section-header">
-                <h2>Calculate Your Savings</h2>
-                <p>See exactly how much you can save with solar-powered local AI</p>
+                <h2>AI Carbon Footprint Calculator</h2>
+                <p>Calculate your current AI carbon impact and discover potential savings</p>
             </div>
             
             <div class="calculator-container">
-                <!-- Stack AI ROI Calculator Widget -->
+                <!-- Stack AI Carbon Calculator -->
                 <iframe 
                     class="stackai-iframe"
                     src="https://www.stack-ai.com/embed/3786c840-821e-4909-a73f-82aa9df3adb1/9f5fcfa3-46c9-45b2-9cec-349e00ce6aa5/6973f2cba0a25b0916cc63d9"
                     allow="microphone; camera"
+                    title="Solara AI Carbon Calculator"
                 ></iframe>
             </div>
             
             <div class="calculator-info">
-                <h3>What We Calculate:</h3>
+                <h3>What This Calculator Measures:</h3>
                 <ul>
-                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Cloud AI Cost Elimination</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Downtime Reduction Savings</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Data Transfer Cost Savings</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Energy & Carbon Impact</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Payback Period & ROI</li>
+                    <li><i class="fas fa-tree" style="color: var(--solar-accent);"></i> Current AI carbon emissions (kg CO₂)</li>
+                    <li><i class="fas fa-car" style="color: var(--solar-accent);"></i> Environmental equivalents (cars, trees, flights)</li>
+                    <li><i class="fas fa-sun" style="color: var(--solar-accent);"></i> Reduction potential with solar AI</li>
+                    <li><i class="fas fa-chart-pie" style="color: var(--solar-accent);"></i> Facility-specific recommendations</li>
+                    <li><i class="fas fa-file-alt" style="color: var(--solar-accent);"></i> ESG reporting insights</li>
                 </ul>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
                     <i class="fas fa-info-circle" style="color: var(--solar-accent);"></i> 
-                    All calculations are estimates. Get a personalized quote after the calculation.
+                    Works for: Manufacturing plants, data centers, offices, research labs, hospitals, universities, and more.
                 </p>
             </div>
         </div>
@@ -940,18 +946,26 @@
     <section id="metrics" class="metrics">
         <div class="container">
             <div class="section-header">
-                <h2>Measurable Impact From Day One</h2>
-                <p>Quantifiable results that deliver immediate value to your operations and sustainability goals.</p>
+                <h2>Quantifiable Sustainable Impact</h2>
+                <p>Measurable results that support your environmental and business goals.</p>
             </div>
             
             <div class="metrics-grid">
                 <div class="metric-item">
-                    <div class="metric-value">100%</div>
-                    <div class="metric-label">Reduction in Cloud AI Costs</div>
+                    <div class="metric-value">90-100%</div>
+                    <div class="metric-label">AI Carbon Reduction</div>
                 </div>
                 <div class="metric-item">
                     <div class="metric-value">0 kg</div>
-                    <div class="metric-label">CO₂ from Inference Operations</div>
+                    <div class="metric-label">CO₂ from AI Operations</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">100%</div>
+                    <div class="metric-label">Renewable Energy</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">0</div>
+                    <div class="metric-label">Cloud Data Transfer</div>
                 </div>
             </div>
         </div>
@@ -961,15 +975,21 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Transform Your Manufacturing AI?</h2>
-                <p>Join our pilot program and be among the first to deploy truly sustainable, secure, and sovereign AI infrastructure.</p>
+                <h2>Ready for Carbon-Neutral AI?</h2>
+                <p>Join organizations transitioning to sustainable AI infrastructure powered by renewable energy.</p>
                 
                 <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Start Your Pilot Program</a>
+                    <a href="#roi-calculator" class="btn btn-primary">
+                        <i class="fas fa-calculator"></i> Calculate Your Impact First
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact for Custom Plan
+                    </a>
                 </div>
                 
                 <p style="margin-top: 2rem; font-size: 1rem; color: var(--text-light);">
-                    <i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> Officially submitted to AEIP Thematic Challenges Platform
+                    <i class="fas fa-check-circle" style="color: var(--solar-accent);"></i> 
+                    Officially submitted to AEIP Thematic Challenges Platform
                 </p>
             </div>
         </div>
@@ -981,7 +1001,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">Solara<span>AI</span></div>
-                    <p>We enable manufacturers to deploy sustainable, secure, and sovereign AI infrastructure powered by on-site renewable energy.</p>
+                    <p>We enable organizations to deploy sustainable, secure, and sovereign AI infrastructure powered by on-site renewable energy.</p>
                     <div class="footer-social">
                         <!-- Social media links would go here -->
                     </div>
@@ -993,7 +1013,7 @@
                         <li><a href="#problem">The Problem</a></li>
                         <li><a href="#solution">Our Solution</a></li>
                         <li><a href="#technology">Technology</a></li>
-                        <li><a href="#roi-calculator">ROI Calculator</a></li>
+                        <li><a href="#roi-calculator">Carbon Calculator</a></li>
                         <li><a href="#metrics">Impact Metrics</a></li>                        
                     </ul>
                 </div>
@@ -1002,12 +1022,13 @@
                     <h3>Contact Us</h3>
                     <p><i class="fas fa-envelope"></i> kipngenohillarybett@gmail.com</p>
                     <p><i class="fas fa-map-marker-alt"></i> Based in Cassino, Italy</p>
-                    <p><i class="fas fa-globe"></i>Available Globally</p>
+                    <p><i class="fas fa-globe"></i> Available for global deployment</p>
+                    <p><i class="fas fa-leaf"></i> Sustainable AI Infrastructure</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 Solara AI. All rights reserved. | Sustainable AI Infrastructure</p>
+                <p>&copy; 2026 Solara AI. All rights reserved. | Carbon-Neutral AI Computing</p>
             </div>
         </div>
     </footer>
@@ -1046,65 +1067,41 @@
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-                header.style.padding = '0';
             } else {
                 header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
             }
         });
         
-        // Simple animation for metric counters (optional enhancement)
+        // Enhance calculator iframe interaction
         document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                threshold: 0.5
-            };
+            const calculatorIframe = document.querySelector('.stackai-iframe');
+            if (calculatorIframe) {
+                // Make iframe focusable for better accessibility
+                calculatorIframe.setAttribute('tabindex', '0');
+                
+                // Add loading indicator (optional)
+                calculatorIframe.addEventListener('load', function() {
+                    console.log('Carbon calculator loaded successfully');
+                });
+            }
             
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Add animation class to metrics section
-                        entry.target.classList.add('animated');
+            // Smooth scroll to calculator with offset for fixed header
+            document.querySelectorAll('a[href^="#roi-calculator"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
                     }
                 });
-            }, observerOptions);
-            
-            // Observe metrics section
-            const metricsSection = document.getElementById('metrics');
-            if (metricsSection) {
-                observer.observe(metricsSection);
-            }
-        });
-
-        // Stack AI widget fallback loader
-        document.addEventListener('DOMContentLoaded', function() {
-            const stackaiIframe = document.querySelector('.stackai-iframe');
-            if (stackaiIframe) {
-                // Add loading state
-                stackaiIframe.addEventListener('load', function() {
-                    console.log('Stack AI ROI Calculator loaded successfully');
-                });
-                
-                stackaiIframe.addEventListener('error', function() {
-                    console.log('Stack AI widget failed to load, showing fallback');
-                    // You could show a fallback message or button here
-                });
-            }
-        });
-    </script>
-    
-    <!-- Stack AI Alternative Script Embed (Backup) -->
-    <script>
-        // Alternative loading method if iframe doesn't work
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const iframe = document.querySelector('.stackai-iframe');
-                if (iframe && !iframe.contentWindow) {
-                    console.log('Loading Stack AI via script method');
-                    const script = document.createElement('script');
-                    script.src = 'https://unpkg.com/react-stackai@latest/dist/vanilla/vanilla-stackai.js';
-                    script.setAttribute('data-project-url', 'https://www.stack-ai.com/embed/3786c840-821e-4909-a73f-82aa9df3adb1/9f5fcfa3-46c9-45b2-9cec-349e00ce6aa5/6973f2cba0a25b0916cc63d9');
-                    document.body.appendChild(script);
-                }
-            }, 2000);
+            });
         });
     </script>
 </body>
